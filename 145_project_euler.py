@@ -14,7 +14,7 @@ def find_reverse():
             sum_num = int(str_num) + int(str_rev)
             sum_num_count = 0
 
-            # check if sum_sum contains ALL odd digits, otherwise break
+            # iterate through sum_num to verify if ALL odd digits, otherwise break
             for j in range(len(str(sum_num))):
                 if int(str(sum_num)[j]) % 2 != 0:
                     sum_num_count += 1
@@ -24,7 +24,8 @@ def find_reverse():
             # if reversible number, increment
             if len(str(sum_num)) == sum_num_count:
                 reversible_num_count += 1
-
+                
+    # return the number of reversible numbers
     return reversible_num_count
 
 
